@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <form method="post">
+      {% csrf_token %}
+
+
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="destcard">Destination card number</span>
+  </div>
+  <input type="number" class="form-control" name="destcardnum" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="amountspan">Amount</span>
+  </div>
+  <input type="number" class="form-control" name="amount" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+
+
+
+    <button type="submit" class="btn btn-primary">Transfer Money</button>
+  </form>
+{% endblock content %}
